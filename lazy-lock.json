@@ -1,8 +1,8 @@
 {
-  "catppuccin": { "branch": "main", "commit": "54002a1adfd543f54352b3ec79d4e62c4163e9ee" },
+  "catppuccin": { "branch": "main", "commit": "dcef0a062de380885193fb0f919217d58b979753" },
   "harpoon": { "branch": "master", "commit": "c1aebbad9e3d13f20bedb8f2ce8b3a94e39e424a" },
-  "lazy.nvim": { "branch": "main", "commit": "276e572f645430bcfd6fd25faa301ea9077f6ab1" },
-  "nvim-treesitter": { "branch": "master", "commit": "ad02fbcdfc391017cad462e04e4740d2887cfa2e" },
+  "lazy.nvim": { "branch": "main", "commit": "c373663b491e2e3426a55bb199ebfccff96fbaca" },
+  "nvim-treesitter": { "branch": "master", "commit": "49e71322db582147ce8f4df1853d9dab08da0826" },
   "plenary.nvim": { "branch": "master", "commit": "50012918b2fc8357b87cff2a7f7f0446e47da174" },
   "ripgrep": { "branch": "master", "commit": "7099e174acbcbd940f57e4ab4913fee4040c826e" },
   "telescope.nvim": { "branch": "master", "commit": "7011eaae0ac1afe036e30c95cf80200b8dc3f21a" },
