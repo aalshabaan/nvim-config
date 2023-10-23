@@ -22,5 +22,6 @@ require("lazy").setup({
 	{"ThePrimeagen/harpoon"},
 	{"tpope/vim-surround"},
 	{"tpope/vim-fugitive"},
-	{"mbbill/undotree"}
+	{"mbbill/undotree"},
+	{"akinsho/git-conflict.nvim", version="*"}
 }, {})
