@@ -1,1 +1,1 @@
-au! BufRead,BufNewFile *.ospp,*.view,*.web,*.alarms,*.snmp,*.modbus,*.mqtt setfiletype json
+au! BufRead,BufNewFile *.keycloak,*.ospp*,*.variables*,*.view,*.web,*.alarms*,*.snmp*,*.modbus*,*.mqtt*,*.maps,owner.*,output.* setfiletype json
