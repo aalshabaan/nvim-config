@@ -1,5 +1,6 @@
 require("Abdulrahman.remap")
 require("Abdulrahman.lazy")
+require("Abdulrahman.altravis")
 
 SetColourscheme()
 vim.wo.scrolloff=10
