@@ -1,6 +1,6 @@
 require("catppuccin").setup {
 	highlight_overrides = {
-		all = function (colors) 
+		all = function (_)
 			return {
 				LineNr = {fg = "#e0351f"}
 			}
