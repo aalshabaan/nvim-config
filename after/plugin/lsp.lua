@@ -27,7 +27,13 @@ end)
 require('mason').setup({})
 require('mason-lspconfig').setup({
     handlers = {
-	lsp.default_setup
+		lsp.default_setup,
+		jdtls = function (opts)
+			local install_path = require("mason-registry").get_package("jdtls"):get_install_path()
+			local jvmArg = "-javaagent:" .. install_path .. "\\lombok.jar"
+			table.insert(opts.cmd, "--jvm-arg=" .. jvmArg)
+			return opts
+		end
     },
     ensure_installed = {'tsserver', 'pyright', 'lua_ls', 'jdtls', 'dockerls', 'docker_compose_language_service'}
 })

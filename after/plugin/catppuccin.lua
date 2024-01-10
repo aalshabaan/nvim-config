@@ -4,7 +4,7 @@ require("catppuccin").setup {
 			return {
 				LineNr = {fg = "#e0351f"},
 				CmpBorder = {fg = colors.grey},
-				StatusLine = {fg = "#333333", bg = "#c7c7c7"}
+				StatusLine = {fg = "#333333", bg = colors.green}
 			}
 		end
 	},
