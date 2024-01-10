@@ -35,6 +35,6 @@ require('mason-lspconfig').setup({
 			return opts
 		end
     },
-    ensure_installed = {'tsserver', 'pyright', 'lua_ls', 'jdtls', 'dockerls', 'docker_compose_language_service'}
+    ensure_installed = {'lua_ls', 'jdtls'}
 })
-lsp.setup_servers({'tsserver', 'pyright', 'lua_ls', 'jdtls', 'dockerls', 'docker_compose_language_service'})
+lsp.setup_servers({'lua_ls', 'jdtls'})
