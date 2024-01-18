@@ -10,7 +10,8 @@ vim.filetype.add({
 	alarms = 'json',
 	modbus = 'json',
 	mqtt = 'json',
-	rules = 'lua'
+	rules = 'lua',
+	template = 'json'
     },
     pattern = {
 	['.*%.ospp*'] = 'json',
