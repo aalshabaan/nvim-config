@@ -23,8 +23,6 @@ require("lazy").setup({
 	{"tpope/vim-surround"},
 	{"tpope/vim-fugitive"},
 	{"mbbill/undotree"},
-	{"akinsho/git-conflict.nvim", version="*"},
-
 	{'williamboman/mason.nvim'},
 	{'williamboman/mason-lspconfig.nvim'},
 	{'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},

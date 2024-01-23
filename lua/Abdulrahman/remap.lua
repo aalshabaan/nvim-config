@@ -20,7 +20,7 @@ vim.keymap.set("n", "N", "Nzz")
 
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
-vim.keymap.set("n", "<C-j>", "<C-w><C-j>")
-vim.keymap.set("n", "<C-k>", "<C-w><C-k>")
-vim.keymap.set("n", "<C-h>", "<C-w><C-h>")
-vim.keymap.set("n", "<C-l>", "<C-w><C-l>")
+vim.keymap.set('n', '<leader>h', vim.cmd.bprevious)
+vim.keymap.set('n', '<leader>l', vim.cmd.bnext)
+vim.keymap.set('n', '<leader>c', vim.cmd.bdelete)
+
