@@ -3,11 +3,11 @@ local lsp = require('lsp-zero')
 lsp.preset('recommended')
 lsp.setup()
 
-lsp.on_attach(function(_, bufnr)
-  -- see :help lsp-zero-keybindings
-  -- to learn the available actions
-  lsp.default_keymaps({buffer = bufnr})
-end)
+-- lsp.on_attach(function(_, bufnr)
+--   -- see :help lsp-zero-keybindings
+--   -- to learn the available actions
+--   lsp.default_keymaps({buffer = bufnr})
+-- end)
 
 lsp.on_attach(function(_, bufnr)
   local opts = {buffer = bufnr, remap = false}
@@ -27,12 +27,12 @@ end)
 require('mason').setup({})
 require('mason-lspconfig').setup({
     handlers = {
-		jdtls = function (opts)
-			local install_path = require("mason-registry").get_package("jdtls"):get_install_path()
-			local jvmArg = "-javaagent:" .. install_path .. "/lombok.jar"
-			table.insert(opts,{cmd = jvmArg})
-			return opts
-		end,
+		-- jdtls = function (opts)
+		-- 	local install_path = require("mason-registry").get_package("jdtls"):get_install_path()
+		-- 	local jvmArg = "-javaagent:" .. install_path .. "/lombok.jar"
+		-- 	table.insert(opts,{cmd = jvmArg})
+		-- 	return opts
+		-- end,
 		lsp.default_setup,
 	},
     ensure_installed = {'lua_ls', 'jdtls'}
