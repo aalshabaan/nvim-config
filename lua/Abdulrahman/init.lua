@@ -3,7 +3,7 @@ require("Abdulrahman.lazy")
 require("Abdulrahman.altravis")
 
 SetColourscheme()
-vim.wo.scrolloff = 10
+vim.wo.scrolloff = 15
 vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.opt.ignorecase = true
