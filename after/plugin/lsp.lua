@@ -25,16 +25,16 @@ lsp.on_attach(function(_, bufnr)
   vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help, opts)
 end)
 
-require('mason').setup({})
+require('mason').setup()
 require('mason-lspconfig').setup({
     handlers = {
-		lsp.default_setup,
-		jdtls = function (serverName)
-			local opts = lspconfig[serverName]
-			local install_path = require("mason-registry").get_package("jdtls"):get_install_path() .. '\\lombok.jar'
-			local jvmArg = "-javaagent:" .. install_path
-			table.insert(opts.document_config.default_config.init_options.jvm_args, 1, jvmArg)
-		end
+		jdtls = function ()
+			local opts = require('lspconfig').jdtls
+			local install_path = require("mason-registry").get_package("jdtls"):get_install_path()
+			local jvmArg = "--jvm-arg=-javaagent:" .. install_path .. "/lombok.jar"
+			table.insert(opts.cmd, jvmArg)
+			return opts
+		end,
     },
     ensure_installed = {'pyright', 'lua_ls', 'jdtls', 'dockerls', 'docker_compose_language_service', 'omnisharp', 'eslint'}
 })
