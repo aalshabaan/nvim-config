@@ -32,6 +32,7 @@ require("lazy").setup({
 	{'L3MON4D3/LuaSnip'},
 	{'tpope/vim-commentary'},
 	{'mfussenegger/nvim-jdtls', enabled = false},
-	{'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons'}}
+	{'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons'}},
+    {"smjonas/inc-rename.nvim"}
 
 }, {})
