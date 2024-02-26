@@ -25,9 +25,10 @@ vim.filetype.add({
 	['.*%.mqtt*'] = 'json',
 	['.*%.analytics*'] = 'json',
 	['.*%.drawio*'] = 'xml',
-	['stack%..*'] = 'yaml'
+	['stack%..*'] = 'yaml',
     },
     filename = {
-	['module.service'] = 'yaml'
+	['module.service'] = 'yaml',
+	-- ['compose.yaml'] = 'compose'
     }
 })

@@ -24,3 +24,4 @@ vim.keymap.set('n', '<leader>h', vim.cmd.bprevious)
 vim.keymap.set('n', '<leader>l', vim.cmd.bnext)
 vim.keymap.set('n', '<leader>c', vim.cmd.bdelete)
 
+vim.keymap.set('i', '<Tab>', '    ')
