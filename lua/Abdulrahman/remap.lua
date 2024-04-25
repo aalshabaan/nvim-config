@@ -1,6 +1,6 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
-vim.keymap.set("n", "<leader>v", vim.cmd.Vex)
+vim.keymap.set("n", "<leader>e", vim.cmd.Explore)
+vim.keymap.set("n", "<leader>v", vim.cmd.vsplit)
 vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("n", "<leader>p", "\"+p")
 vim.keymap.set("n", "<leader>P", "\"+P")
@@ -24,4 +24,4 @@ vim.keymap.set('n', '<leader>h', vim.cmd.bprevious)
 vim.keymap.set('n', '<leader>l', vim.cmd.bnext)
 vim.keymap.set('n', '<leader>c', vim.cmd.bdelete)
 
-vim.keymap.set('i', '<Tab>', '    ')
+-- vim.keymap.set('i', '<Tab>', '    ')
