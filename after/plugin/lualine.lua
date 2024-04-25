@@ -1,8 +1,9 @@
 require('lualine').setup({
 	sections = {
-		lualine_a = {'buffers'},
+        lualine_a = {'mode',},
+        lualine_b = {'branch', 'filename', 'diff'},
 		lualine_c = {function ()
-			return 'واتقوا يوماً ترجعون فيه إلى الله ثم توفى كل نفس ما كسبت وهم لا يظلمون'
+			return 'And fear a day in which you shall return to God, then every soul will be given the full due of what it has done, and no injustice will be done unto them'
 		end}
 	}
 })
