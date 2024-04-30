@@ -24,4 +24,12 @@ vim.keymap.set('n', '<leader>h', vim.cmd.bprevious)
 vim.keymap.set('n', '<leader>l', vim.cmd.bnext)
 vim.keymap.set('n', '<leader>c', vim.cmd.bdelete)
 
+-- Autoclose brackets, quotes, and other things
+vim.keymap.set('i', '{<Enter>', '{<Enter>}<Esc>O')
+vim.keymap.set('i', '(<Enter>', '(<Enter>)<Esc>O')
+vim.keymap.set('i', '{', '{}<Left>')
+vim.keymap.set('i', '(', '()<Left>')
+vim.keymap.set('i', '\'', '\'\'<Left>')
+vim.keymap.set("i", "\"", "\"\"<Left>")
+--
 -- vim.keymap.set('i', '<Tab>', '    ')
