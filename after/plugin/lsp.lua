@@ -1,5 +1,4 @@
 local lspzero = require('lsp-zero')
-local mason_registry = require('mason-registry')
 
 lspzero.preset('recommended')
 lspzero.setup()
@@ -27,14 +26,6 @@ end)
 require('mason').setup()
 require('mason-lspconfig').setup({
     handlers = {
-		-- jdtls = function (_)
-		-- 	local opts = require('lspconfig').jdtls
-		-- 	local install_path = mason_registry.get_package("jdtls"):get_install_path()
-		-- 	local jvmArg = "--jvm-arg=-javaagent:" .. install_path .. "\\lombok.jar"
-		-- 	table.insert(opts.cmd, jvmArg)
-		-- 	print("Setting up jdtls")
-		-- 	return opts
-		-- end,
 		lspzero.default_setup,
     },
     ensure_installed = {'pyright', 'lua_ls', 'jdtls', 'dockerls', 'docker_compose_language_service', 'omnisharp', 'eslint'}
