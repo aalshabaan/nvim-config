@@ -14,6 +14,7 @@ vim.filetype.add({
         reports = 'json',
         rules = 'lua',
         template = 'json',
+        maps = 'json',
         ["network-monitoring"] = 'json',
         lookup = 'csv'
     },
