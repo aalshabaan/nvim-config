@@ -7,7 +7,7 @@ vim.keymap.set('n', '<leader>fb', builtin.buffers)
 vim.keymap.set('n', '<leader>gb', builtin.git_branches)
 vim.keymap.set('n', '<leader>gc', builtin.git_commits)
 vim.keymap.set('n', '<leader>bc', builtin.git_bcommits)
-
+vim.keymap.set('n', '<leader>vh', builtin.help_tags)
 
 telescope.setup({
 	file_ignore_patterns = {
