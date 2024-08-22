@@ -1,6 +1,8 @@
 require("Abdulrahman.remap")
 require("Abdulrahman.lazy")
 require("Abdulrahman.altravis")
+require("Abdulrahman.autocmd-group")
+require("Abdulrahman.filetype-indent")
 
 SetColourscheme()
 
