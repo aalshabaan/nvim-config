@@ -28,9 +28,9 @@ require('mason-lspconfig').setup({
     handlers = {
 		lspzero.default_setup,
     },
-    ensure_installed = {'pyright', 'lua_ls', 'jdtls', 'dockerls', 'docker_compose_language_service', 'omnisharp', 'eslint'}
+    ensure_installed = {'basedpyright', 'lua_ls', 'jdtls', 'dockerls', 'docker_compose_language_service', 'omnisharp', 'eslint'}
 })
-lspzero.setup_servers({'pyright', 'lua_ls', 'jdtls', 'dockerls', 'docker_compose_language_service', 'omnisharp', 'eslint'})
+lspzero.setup_servers({'basedpyright', 'lua_ls', 'jdtls', 'dockerls', 'docker_compose_language_service', 'omnisharp', 'eslint'})
 
 lspzero.new_client({
   name = 'docker_compose_language_service',
