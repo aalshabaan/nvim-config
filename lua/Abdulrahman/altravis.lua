@@ -16,7 +16,8 @@ vim.filetype.add({
         template = 'json',
         maps = 'json',
         ["network-monitoring"] = 'json',
-        lookup = 'csv'
+        lookup = 'csv',
+        collections = 'json'
     },
     pattern = {
         ['.*%.ospp.*'] = 'json',
@@ -32,6 +33,8 @@ vim.filetype.add({
         ['.*%.analytics.*'] = 'json',
         ['.*%.coms.*'] = 'json',
         ['.*%.reports.*'] = 'json',
+        ['.*%.collections.*'] = 'json',
+        ['.*%.maps.*'] = 'json',
         ['.*%.drawio.*'] = 'xml',
         ['.*%.lookup.*'] = 'csv',
         ['stack%..*'] = 'yaml.docker-compose',
