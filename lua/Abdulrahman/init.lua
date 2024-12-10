@@ -25,3 +25,4 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
 vim.opt.wrap = false
+vim.opt.ff = 'unix'
