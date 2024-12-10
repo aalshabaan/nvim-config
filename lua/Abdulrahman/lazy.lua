@@ -37,6 +37,21 @@ require("lazy").setup({
     { 'nvim-lualine/lualine.nvim',        dependencies = { 'nvim-tree/nvim-web-devicons' } },
     { 'smjonas/inc-rename.nvim' },
     { 'towolf/vim-helm' },
-    { 'nvim-tree/nvim-tree.lua',          enabled = false }
+    { 'nvim-tree/nvim-tree.lua',          enabled = false },
+    { 'stevearc/oil.nvim',
+        ---@module 'oil'
+        ---@type oil.SetupOpts
+        opts = {
+            columns = {
+                'icon',
+                'permissions'
+            },
+            view_options = {
+                show_hidden = true
+            }
+        },
+        -- Optional dependencies
+        dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if prefer nvim-web-devicons
+    }
 
 }, {})
