@@ -1,5 +1,4 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>e", vim.cmd.Oil)
 vim.keymap.set("n", "<leader>v", vim.cmd.vsplit)
 vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("n", "<leader>p", "\"+p")

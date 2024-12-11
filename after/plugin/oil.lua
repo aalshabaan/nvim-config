@@ -7,3 +7,9 @@ require('oil').setup({
         show_hidden = true
     }
 })
+vim.keymap.set("n", "<leader>e", function ()
+    if vim.bo.filetype == 'oil' then
+        return
+    end
+    vim.cmd('Oil')
+end)
