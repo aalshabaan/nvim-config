@@ -3,6 +3,7 @@ require("Abdulrahman.lazy")
 require("Abdulrahman.altravis")
 require("Abdulrahman.autocmd-group")
 require("Abdulrahman.filetype-indent")
+require("Abdulrahman.helm")
 
 SetColourscheme()
 
