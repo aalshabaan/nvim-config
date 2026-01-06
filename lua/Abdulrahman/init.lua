@@ -1,19 +1,22 @@
 require("Abdulrahman.remap")
 require("Abdulrahman.lazy")
 require("Abdulrahman.altravis")
-require("Abdulrahman.customCommands")
+require("Abdulrahman.autocmd-group")
+require("Abdulrahman.filetype-indent")
+require("Abdulrahman.helm")
 
 SetColourscheme()
+
 vim.wo.scrolloff = 15
 vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+vim.opt.wrap = false
 
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
-vim.opt.smarttab = true
 vim.opt.expandtab = true
 
 vim.opt.swapfile = false
@@ -25,4 +28,6 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
 vim.opt.wrap = false
+vim.opt.bomb = false
+
 vim.opt.ff = 'unix'

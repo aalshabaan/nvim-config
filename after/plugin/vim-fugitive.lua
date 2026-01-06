@@ -4,3 +4,8 @@ vim.keymap.set('n', '<leader>gl', function ()
 end)
 vim.keymap.set('n', '<leader>blame', ':G blame<Enter>zz<C-w>l')
 vim.keymap.set('n', '<leader>gd', function() vim.cmd("Gvdiffsplit!") end)
+
+vim.keymap.set('n', '<leader>cp', function ()
+    local word = vim.fn.expand("<cword>")
+    vim.cmd("G cherry-pick " .. word)
+end)

@@ -1,4 +1,4 @@
 function SetColourscheme(color)
-	vim.cmd.colorscheme (color or "catppuccin-mocha")
+	vim.cmd.colorscheme(color or "catppuccin-mocha")
 end
 
