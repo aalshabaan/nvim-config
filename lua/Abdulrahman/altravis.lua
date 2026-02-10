@@ -31,6 +31,7 @@ vim.filetype.add({
         ['.*%.network-monitoring.*'] = 'json',
         ['.*%.mqtt.*'] = 'json',
         ['.*%.analytics.*'] = 'json',
+        ['.*%.rights.*'] = 'json',
         ['.*%.coms.*'] = 'json',
         ['.*%.reports.*'] = 'json',
         ['.*%.collections.*'] = 'json',
