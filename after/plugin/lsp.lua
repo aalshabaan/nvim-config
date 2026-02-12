@@ -1,13 +1,4 @@
--- local lspzero = require('lsp-zero')
-
--- lspzero.preset('recommended')
--- lspzero.setup()
-
--- lspzero.on_attach(function(_, bufnr)
---   -- see :help lsp-zero-keybindings
---   -- to learn the available actions
---   lspzero.default_keymaps({buffer = bufnr})
--- end)
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 vim.api.nvim_create_autocmd('LspAttach', {
     callback = function(args)
@@ -26,13 +17,19 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.keymap.set("n", "<leader>dd", function()
             vim.diagnostic.setqflist(vim.diagnostic.toqflist(vim.diagnostic.get()))
         end, opts)
+        vim.lsp.inlay_hint.enable(true,{ bufnr = bufnr })
     end
+})
+
+vim.lsp.config('*', {
+    capabilities = capabilities
 })
 
 require('mason').setup()
 require('mason-lspconfig').setup({
     ensure_installed = {'basedpyright', 'lua_ls', 'jdtls', 'dockerls', 'docker_compose_language_service', 'omnisharp', 'eslint'}
 })
+
 
 -- lspzero.new_client({
 --   name = 'docker_compose_language_service',
