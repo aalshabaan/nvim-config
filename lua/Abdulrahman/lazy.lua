@@ -33,10 +33,11 @@ require("lazy").setup({
     { 'hrsh7th/nvim-cmp' },
     { 'L3MON4D3/LuaSnip' },
     { 'tpope/vim-commentary' },
-    { 'mfussenegger/nvim-jdtls',          enabled = false },
     { 'nvim-lualine/lualine.nvim',        dependencies = { 'nvim-tree/nvim-web-devicons' } },
     { 'smjonas/inc-rename.nvim' },
     { 'towolf/vim-helm' },
     { 'stevearc/oil.nvim',                dependencies = { "nvim-tree/nvim-web-devicons" } },
     { 'github/copilot.vim' },
+    { 'mfussenegger/nvim-jdtls' },
+    { 'mfussenegger/nvim-dap' },
 }, {})
