@@ -11,42 +11,51 @@ cmp.setup({
             luasnip.lsp_expand(args.body)
         end
     },
-	preselect = 'item',
-	completion = {
-		completeopt = 'menu,menuone,noinsert'
-	},
-    window = {
-        completion = cmp.config.window.bordered(),
-        documentation = cmp.config.window.bordered(),
+    preselect = 'item',
+    completion = {
+        completeopt = 'menu,menuone,noinsert'
     },
-	mapping = cmp.mapping.preset.insert({
-		-- `Enter` key to confirm completion
-		['<tab>'] = cmp.mapping.confirm({select = true}),
-		['<CR>'] = cmp.mapping.confirm({select = false}),
+    border = {
+        completion = true,
+        documentation = true
+    },
+    window = {
+        completion = {
+            border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+            winhighlight = "Normal:CmpPmenu,FloatBorder:CmpBorder,CursorLine:PmenuSel,Search:None",
+        },
+        documentation = {
+            border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+            winhighlight = "Normal:CmpPmenu,FloatBorder:CmpBorder,CursorLine:PmenuSel,Search:None",
+        },
+    },
 
-		-- Ctrl+Space to trigger completion menu
-		['<C-Space>'] = cmp.mapping.complete(),
+    mapping = cmp.mapping.preset.insert({
+        -- `Enter` key to confirm completion
+        ['<tab>'] = cmp.mapping.confirm({ select = true }),
+        ['<CR>'] = cmp.mapping.confirm({ select = false }),
 
-		-- Navigate between snippet placeholder
-		-- ['<C-f>'] = cmp.mapping(function(fallback)
-            -- if luasnip.locally_jumpable(1) then
-                -- luasnip.jump(1)
-            -- else
-                -- fallback()
-            -- end
+        -- Ctrl+Space to trigger completion menu
+        ['<C-Space>'] = cmp.mapping.complete(),
 
-        -- end, {'i', 's'}),
-		-- ['<C-b>'] = cmp.mapping(function(fallback)
-            -- if luasnip.locally_jumpable(-1) then
-                -- luasnip.jump(-1)
-            -- else
-                -- fallback()
-            -- end
+        -- Navigate between snippet placeholder
+        ['<C-f>'] = cmp.mapping(function(fallback)
+            if luasnip.locally_jumpable(1) then
+                luasnip.jump(1)
+            else
+                fallback()
+            end
+        end, { 'i', 's' }),
+        ['<C-b>'] = cmp.mapping(function(fallback)
+            if luasnip.locally_jumpable(-1) then
+                luasnip.jump(-1)
+            else
+                fallback()
+            end
+        end, { 'i', 's' }),
 
-        -- end, {'i', 's'}),
-
-		-- Scroll up and down in the completion documentation
-		['<C-u>'] = cmp.mapping.scroll_docs(-4),
-		['<C-d>'] = cmp.mapping.scroll_docs(4),
-	})
+        -- Scroll up and down in the completion documentation
+        ['<C-u>'] = cmp.mapping.scroll_docs(-4),
+        ['<C-d>'] = cmp.mapping.scroll_docs(4),
+    })
 })
