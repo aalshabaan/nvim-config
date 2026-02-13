@@ -30,3 +30,8 @@ vim.opt.incsearch = true
 vim.opt.bomb = false
 
 vim.opt.ff = 'unix'
+
+vim.diagnostic.config({
+    virtual_text = true,
+})
+
