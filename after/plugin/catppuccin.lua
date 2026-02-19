@@ -1,16 +1,16 @@
 require("catppuccin").setup {
-    auto_integrations =true,
     highlight_overrides = {
         all = function(colors)
             return {
-                LineNr = { fg = "#e0351f" },
+                LineNr = { fg = colors.red },
+                CmpBorder = { fg = colors.blue },
             }
         end
     },
     transparent_background = true,
     show_end_of_buffers = false,
     float = {
-        transparent = true,
+        transparent = false,
         solid = false
-    }
+    },
 }

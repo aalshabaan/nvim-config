@@ -5,7 +5,7 @@ require("Abdulrahman.autocmd-group")
 require("Abdulrahman.filetype-indent")
 require("Abdulrahman.helm")
 
-SetColourscheme()
+setColourScheme()
 
 vim.wo.scrolloff = 15
 vim.opt.nu = true
