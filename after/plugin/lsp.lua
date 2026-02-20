@@ -30,8 +30,14 @@ vim.lsp.config('*', {
     capabilities = capabilities
 })
 
+vim.lsp.config('basedpyright', {
+    python = {
+        venvPath = '.venv'
+    }
+})
+
 require('mason').setup()
 require('mason-lspconfig').setup({
-    ensure_installed = {'basedpyright', 'lua_ls', 'dockerls', 'docker_compose_language_service', 'omnisharp', 'eslint'}
+    ensure_installed = {'basedpyright', 'lua_ls',} -- 'dockerls', 'docker_compose_language_service', 'omnisharp', 'eslint'}
 })
 
