@@ -30,6 +30,7 @@ vim.opt.incsearch = true
 vim.opt.bomb = false
 
 vim.opt.ff = 'unix'
+vim.o.winborder = 'rounded'
 
 vim.diagnostic.config({
     virtual_text = true,
