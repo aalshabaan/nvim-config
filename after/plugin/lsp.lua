@@ -32,7 +32,8 @@ vim.lsp.config('*', {
 
 vim.lsp.config('basedpyright', {
     python = {
-        venvPath = '.venv'
+        venvPath = '.venv',
+        typeCheckingMode = 'standard',
     }
 })
 
