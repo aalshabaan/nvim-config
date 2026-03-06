@@ -30,6 +30,20 @@ vim.lsp.config('*', {
     capabilities = capabilities
 })
 
+
+local homedir = os.getenv("HOME") or os.getenv("UserProfile") -- OS-agnostic homedir
+local debugger_path = vim.fn.join(
+    { homedir, '.vscode', 'extensions', 'vscjava.vscode-java-debug-*', 'server',
+        'com.microsoft.java.debug.plugin-*.jar' }, '/')
+
+local bundles = vim.fn.glob(debugger_path, true)
+
+vim.lsp.config('jdtls', {
+    init_options = {
+        bundles = bundles,
+    }
+})
+
 vim.lsp.config('basedpyright', {
     python = {
         venvPath = '.venv',
@@ -39,6 +53,5 @@ vim.lsp.config('basedpyright', {
 
 require('mason').setup()
 require('mason-lspconfig').setup({
-    ensure_installed = {'basedpyright', 'lua_ls',} -- 'dockerls', 'docker_compose_language_service', 'omnisharp', 'eslint'}
+    ensure_installed = { 'basedpyright', 'lua_ls', } -- 'dockerls', 'docker_compose_language_service', 'omnisharp', 'eslint'}
 })
-
