@@ -22,8 +22,8 @@ vim.opt.expandtab = true
 vim.opt.swapfile = false
 vim.opt.backup = false
 
-local homedir = os.getenv("HOME") or os.getenv("UserProfile") -- OS-agnostic homedir
-vim.opt.undodir = homedir .. "/.vim/undodir"
+HOMEDIR = os.getenv("HOME") or os.getenv("UserProfile") -- OS-agnostic homedir
+vim.opt.undodir = HOMEDIR .. "/.vim/undodir"
 vim.opt.undofile = true
 
 vim.opt.hlsearch = false

@@ -37,6 +37,5 @@ require("lazy").setup({
     { 'smjonas/inc-rename.nvim' },
     { 'towolf/vim-helm' },
     { 'stevearc/oil.nvim',                dependencies = { "nvim-tree/nvim-web-devicons" } },
-    { 'mfussenegger/nvim-jdtls' },
-    { 'mfussenegger/nvim-dap' },
+    { 'mfussenegger/nvim-jdtls',          dependencies = { 'mfussenegger/nvim-dap' } },
 }, {})
