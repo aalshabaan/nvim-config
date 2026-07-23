@@ -38,4 +38,11 @@ require("lazy").setup({
     { 'towolf/vim-helm' },
     { 'stevearc/oil.nvim',                dependencies = { "nvim-tree/nvim-web-devicons" } },
     { 'mfussenegger/nvim-jdtls',          dependencies = { 'mfussenegger/nvim-dap' } },
+    { 'github/copilot.vim' },
+    {
+        "iamcco/markdown-preview.nvim",
+        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+        ft = { "markdown" },
+        build = function() vim.fn["mkdp#util#install"]() end,
+    }
 }, {})
