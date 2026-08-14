@@ -25,6 +25,7 @@ vim.keymap.set("n", "N", "Nzz")
 vim.keymap.set("n", "G", "Gzz")
 
 vim.keymap.set("i", "<C-c>", "<Esc>")
+vim.keymap.set("i", "<C-z>", "<Esc>")
 
 vim.keymap.set('n', '<leader>h', vim.cmd.bprevious)
 vim.keymap.set('n', '<leader>l', vim.cmd.bnext)

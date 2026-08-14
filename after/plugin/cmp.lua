@@ -32,7 +32,7 @@ cmp.setup({
 
     mapping = cmp.mapping.preset.insert({
         -- `Enter` key to confirm completion
-        ['<tab>'] = cmp.mapping.confirm({ select = true }),
+        ['<C-y>'] = cmp.mapping.confirm({ select = true }),
         ['<CR>'] = cmp.mapping.confirm({ select = false }),
 
         -- Ctrl+Space to trigger completion menu
