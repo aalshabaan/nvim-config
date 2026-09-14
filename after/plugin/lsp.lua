@@ -41,7 +41,17 @@ local bundles = vim.fn.glob(debugger_path, true)
 vim.lsp.config('jdtls', {
     init_options = {
         bundles = bundles,
+    },
+    settings = {
+        java = {
+            format = {
+                settings = {
+                    url = homedir .. '/.config/formatter.xml'
+                }
+            }
+        }
     }
+
 })
 
 vim.lsp.config('basedpyright', {
