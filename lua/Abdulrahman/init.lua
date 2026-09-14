@@ -22,8 +22,8 @@ vim.opt.expandtab = true
 vim.opt.swapfile = false
 vim.opt.backup = false
 
-HOMEDIR = os.getenv("HOME") or os.getenv("UserProfile") -- OS-agnostic homedir
-vim.opt.undodir = HOMEDIR .. "/.vim/undodir"
+local homedir = os.getenv("HOME") or os.getenv("UserProfile") -- OS-agnostic homedir
+vim.opt.undodir = homedir .. "/.vim/undodir"
 vim.opt.undofile = true
 
 vim.opt.hlsearch = false
@@ -36,5 +36,23 @@ vim.o.winborder = 'rounded'
 
 vim.diagnostic.config({
     virtual_text = true,
+})
+
+-- Autosave when leaving a buffer/window or losing focus
+vim.api.nvim_create_autocmd({"BufLeave", "WinLeave", "FocusLost"}, {
+    pattern = {"*"},
+    group = "MyGroup",
+    callback = function (args)
+        local buf = args.buf
+        if vim.bo[buf].buftype ~= "" or not vim.bo[buf].modifiable or not vim.bo[buf].modified then
+            return
+        end
+        if vim.api.nvim_buf_get_name(buf) == "" then
+            return
+        end
+        vim.api.nvim_buf_call(buf, function ()
+            vim.cmd("silent! write")
+        end)
+    end
 })
 
