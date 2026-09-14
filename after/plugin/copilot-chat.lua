@@ -1,26 +1,26 @@
-local copilot = require('CopilotChat')
-local completion = require('CopilotChat.completion')
+-- local copilot = require('CopilotChat')
+-- local completion = require('CopilotChat.completion')
 
-local mapping = {
-    complete = {
-        insert = '<C-Space>',
-        callback = function()
-            completion.complete()
-        end
-    },
-    close = {
-        normal = 'q',
-        insert = '<Esc>',
-        callback = function()
-            completion.complete()
-        end
-    },
-}
+-- local mapping = {
+--     complete = {
+--         insert = '<C-Space>',
+--         callback = function()
+--             completion.complete()
+--         end
+--     },
+--     close = {
+--         normal = 'q',
+--         insert = '<Esc>',
+--         callback = function()
+--             completion.complete()
+--         end
+--     },
+-- }
 
-copilot.setup({
-    config = {
-        mappings = mapping,
-    }
-})
+-- copilot.setup({
+--     config = {
+--         mappings = mapping,
+--     }
+-- })
 
-vim.keymap.set('n','<leader>cc', copilot.toggle)
+-- vim.keymap.set('n','<leader>cc', copilot.toggle)
