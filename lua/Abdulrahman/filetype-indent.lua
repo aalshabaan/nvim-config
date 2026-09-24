@@ -1,5 +1,5 @@
 vim.api.nvim_create_autocmd({"BufEnter"}, {
-    pattern = {"*.html"},
+    pattern = {"*.html", "*.json"},
     group = "MyGroup",
     callback = function (args)
         vim.bo[args.buf].shiftwidth=2
