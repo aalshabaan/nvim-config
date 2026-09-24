@@ -22,6 +22,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
             vim.diagnostic.setqflist(vim.diagnostic.toqflist(vim.diagnostic.get()))
         end, opts)
         vim.lsp.inlay_hint.enable(true,{ bufnr = bufnr })
+
     end
 })
 
@@ -47,6 +48,22 @@ vim.lsp.config('jdtls', {
             format = {
                 settings = {
                     url = homedir .. '/.config/formatter.xml'
+                }
+            },
+            sources = {
+                organizeImports = {
+                    starThreshold = 9999,
+                    staticStarThreshold = 9999
+                }
+            },
+            completion = {
+                importOrder = {
+                    'java',
+                    'javax',
+                    'org',
+                    'com',
+                    '*',
+                    'ch.salt',
                 }
             }
         }
