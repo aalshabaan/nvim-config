@@ -21,7 +21,7 @@ require("lazy").setup({
             "BurntSushi/ripgrep" }
     },
     { "catppuccin/nvim",                  name = "catppuccin",                             priority = 1000 },
-    { "nvim-treesitter/nvim-treesitter",  build = ":TSUpdate" },
+    { "nvim-ireesitter/nvim-treesitter",  build = ":TSUpdate" },
     { "ThePrimeagen/harpoon" },
     { "tpope/vim-surround" },
     { "tpope/vim-fugitive" },
@@ -39,6 +39,7 @@ require("lazy").setup({
     { 'towolf/vim-helm' },
     { 'stevearc/oil.nvim',                dependencies = { "nvim-tree/nvim-web-devicons" } },
     { 'mfussenegger/nvim-jdtls',          dependencies = { 'mfussenegger/nvim-dap' } },
+    { 'phelipetls/jsonpath.nvim',          dependencies = { 'nvim-ireesitter/nvim-treesitter' } },
     -- { 'github/copilot.vim' },
     {
         "iamcco/markdown-preview.nvim",
