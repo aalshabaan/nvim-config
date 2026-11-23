@@ -37,7 +37,7 @@ local debugger_path = vim.fn.join(
     { homedir, '.vscode', 'extensions', 'vscjava.vscode-java-debug-*', 'server',
         'com.microsoft.java.debug.plugin-*.jar' }, '/')
 
-local bundles = vim.fn.glob(debugger_path, true)
+local bundles = vim.fn.glob(debugger_path, true, true)
 
 vim.lsp.config('jdtls', {
     init_options = {
@@ -48,7 +48,9 @@ vim.lsp.config('jdtls', {
             format = {
                 settings = {
                     url = homedir .. '/.config/formatter.xml'
-                }
+                },
+                tabSize = vim.o.tabstop,
+                insertSpaces = true
             },
             sources = {
                 organizeImports = {
@@ -62,19 +64,32 @@ vim.lsp.config('jdtls', {
                     'javax',
                     'org',
                     'com',
-                    '*',
+                    '',
+                    '\\#',
                     'ch.salt',
                 }
+            },
+            codeGeneration = {
+                generateComments = false,
+
             }
         }
-    }
+    },
+    on_attach = function (client, buffer_number)
+        local jdtls = require('jdtls')
+        jdtls.setup.add_commands()
+        local opts = {silent = true, buffer = buffer_number}
+        vim.keymap.set('n', '<leader>oi', jdtls.organize_imports, opts)
+    end
 
 })
 
 vim.lsp.config('basedpyright', {
-    python = {
-        venvPath = '.venv',
-        typeCheckingMode = 'standard',
+    settings = {
+        python = {
+            venvPath = '.venv',
+            typeCheckingMode = 'standard',
+        }
     }
 })
 
