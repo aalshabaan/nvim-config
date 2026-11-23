@@ -15,13 +15,12 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     {
         "nvim-telescope/telescope.nvim",
-        tag = "0.1.4",
         dependencies = {
             "nvim-lua/plenary.nvim",
             "BurntSushi/ripgrep" }
     },
     { "catppuccin/nvim",                  name = "catppuccin",                             priority = 1000 },
-    { "nvim-treesitter/nvim-treesitter",  build = ":TSUpdate" },
+    { "nvim-treesitter/nvim-treesitter",  build = ":TSUpdate",                                 lazy = false },
     { "ThePrimeagen/harpoon" },
     { "tpope/vim-surround" },
     { "tpope/vim-fugitive" },
